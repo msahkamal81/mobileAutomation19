@@ -86,6 +86,22 @@ public class TestHomePage extends MobileAPI2 {
         loginPage.LegalBusinessPhone();
 
     }
+    @Test
+    public void DailyDeals() throws InterruptedException {
+        homePage.DailyDeals();
+
+    }
+    @Test
+    public void Image() throws InterruptedException {
+        homePage.Image();
+
+    }
+    @Test
+    public void SEEALL() throws InterruptedException {
+        homePage.SEEALL();
+
+    }
+
 
 
 

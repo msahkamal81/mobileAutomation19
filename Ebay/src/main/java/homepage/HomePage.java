@@ -18,6 +18,12 @@ public class HomePage extends MobileAPI2 {
     WebElement LOGO;
     @FindBy(id = "com.ebay.mobile:id/search_box")
     WebElement SEARCHBOX;
+    @FindBy(xpath = "//android.widget.TextView[@content-desc=\"Daily Deals - Carousel\"]")
+    WebElement DailyDeals;
+    @FindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Image search options\"]")
+    WebElement Image;
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"See All Deals\"]")
+    WebElement SEEALL;
 
 
     public void clickOnSELLING() throws InterruptedException {
@@ -42,6 +48,18 @@ public class HomePage extends MobileAPI2 {
     }
     public void clickOnSEARCHBOX() throws InterruptedException {
         SEARCHBOX.click();
+        Thread.sleep(5);
+    }
+    public void DailyDeals() throws InterruptedException {
+        DailyDeals.click();
+        Thread.sleep(5);
+    }
+    public void Image() throws InterruptedException {
+        Image.click();
+        Thread.sleep(5);
+    }
+    public void SEEALL() throws InterruptedException {
+        SEEALL.click();
         Thread.sleep(5);
     }
 
