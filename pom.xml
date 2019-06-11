@@ -12,6 +12,8 @@
         <module>Generic</module>
         <module>TDbank</module>
         <module>ESPN</module>
+        <module>Linkedin</module>
+        <module>Ebay</module>
     </modules>
 
     <dependencyManagement>

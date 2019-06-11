@@ -78,15 +78,15 @@ public class MobileAPI2 {
             capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
             capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
             capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-            capabilities.setCapability(MobileCapabilityType.APP, "/Users/mohammadsahkamal/IdeaProjects/MobilleAutomationPractice/ESPN/src/app/ESPNCricinfo Live Cricket Scores News Videos_v6.6.0_apkpure.com.apk");
+            capabilities.setCapability(MobileCapabilityType.APP, "/Users/mohammadsahkamal/IdeaProjects/MobilleAutomationPractice/Ebay/src/main/app/Online Shopping Buy sell and save with eBay_v5.32.1.0_apkpure.com.apk");
             appiumDriver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);
 
         } else {
             cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, version);
-            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.ESPN");
+            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.Ebay");
             cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
             cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.IOS);
-            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.ESPN");
+            cap.setCapability(MobileCapabilityType.APP_PACKAGE, "com.Ebay");
             if (appiumDriver == null) {
                 appiumDriver = new IOSDriver(new URL("http://localhost:4723/wd/hub"), cap);
             }
