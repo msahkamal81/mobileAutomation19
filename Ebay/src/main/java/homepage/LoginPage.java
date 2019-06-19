@@ -32,14 +32,14 @@ public class LoginPage extends MobileAPI2 {
         Thread.sleep(5);
     }
     public void clickOnCreateaBusinessAccount() throws InterruptedException {
-        CreateaBusinessAccount.getText();
+        CreateaBusinessAccount.click();
         Thread.sleep(5);
     }
-    public void inputLegalbusinessName() throws InterruptedException {
+    public void LegalbusinessName() throws InterruptedException {
         LegalbusinessName.sendKeys("kamal");
         Thread.sleep(5);
     }
-    public void inputLegalBusinessEmail() throws InterruptedException {
+    public void LegalBusinessEmail() throws InterruptedException {
         LegalBusinessEmail.sendKeys("kamal@gmail.com");
         Thread.sleep(5);
     }

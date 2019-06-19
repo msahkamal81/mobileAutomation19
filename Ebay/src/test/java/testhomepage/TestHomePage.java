@@ -3,6 +3,7 @@ package testhomepage;
 import base.MobileAPI2;
 import homepage.HomePage;
 import homepage.LoginPage;
+import homepage.SignInPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -10,6 +11,7 @@ import org.testng.annotations.Test;
 public class TestHomePage extends MobileAPI2 {
     HomePage homePage;
     LoginPage loginPage;
+    SignInPage signInPage;
 
 
 
@@ -18,6 +20,7 @@ public class TestHomePage extends MobileAPI2 {
     public void init() {
         homePage = PageFactory.initElements(appiumDriver, HomePage.class);
         loginPage = PageFactory.initElements(appiumDriver, LoginPage.class);
+        signInPage = PageFactory.initElements(appiumDriver, SignInPage.class);
 
 
     }
@@ -54,34 +57,41 @@ public class TestHomePage extends MobileAPI2 {
     @Test
     public void clickOnRegister() throws InterruptedException {
         loginPage.clickOnRegister();
+        loginPage.clickOnCreateaBusinessAccount();
+        loginPage.LegalbusinessName();
+        loginPage.LegalBusinessEmail();
+        loginPage.ReenterEmail();
+        loginPage.Password();
+        loginPage.LegalBusinessPhone();
+
 
     }
-    @Test
+    //@Test
     public void clickOnCreateaBusinessAccount() throws InterruptedException {
         loginPage.clickOnCreateaBusinessAccount();
 
     }
-    @Test
-    public void inputLegalbusinessName() throws InterruptedException {
-        loginPage.inputLegalbusinessName();
+    //@Test(priority = 2)
+    public void LegalbusinessName() throws InterruptedException {
+        loginPage.LegalbusinessName();
 
     }
-    @Test
-    public void inputLegalBusinessEmail() throws InterruptedException {
-        loginPage.inputLegalBusinessEmail();
+    //@Test(priority = 3)
+    public void LegalBusinessEmail() throws InterruptedException {
+        loginPage.LegalBusinessEmail();
 
     }
-    @Test
+    //@Test(priority = 4)
     public void ReenterEmail() throws InterruptedException {
         loginPage.ReenterEmail();
 
     }
-    @Test
+    //@Test(priority = 5)
     public void Password() throws InterruptedException {
         loginPage.Password();
 
     }
-    @Test
+    //@Test(priority = 6)
     public void LegalBusinessPhone() throws InterruptedException {
         loginPage.LegalBusinessPhone();
 
@@ -101,9 +111,11 @@ public class TestHomePage extends MobileAPI2 {
         homePage.SEEALL();
 
     }
-
-
-
-
+    @Test(priority = 1)
+    public void SignIn(){
+        signInPage.SignIn();
+        signInPage.CREATEANACCOUNT();
+        signInPage.CONTINUEWITHGOOGLE();
+    }
 }
 
